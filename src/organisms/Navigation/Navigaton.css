@@ -1,0 +1,23 @@
+.nav {
+	display: flex;
+	flex-direction: row;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  position: relative;
+}
+
+.nav > li {
+  padding: 10px;
+}
+.nav .nav_item .nav_item_dropdrown {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 100%;
+}
+
+.nav .nav_item:hover .nav_item_dropdrown {
+  display: block;
+}
