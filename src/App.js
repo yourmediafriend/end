@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import Navigation from './organisms/Navigation'
+import Page from "./layout/Page";
+import Header from "./layout/Header";
 
 function App() {
-
-
-  return (
-      <Navigation />
-  );
+	return (
+		<Page>
+			<Header />
+		</Page>
+	);
 }
 
 export default App;
