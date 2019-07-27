@@ -17,8 +17,10 @@
 .topstrap_inner h2 {
 	font-family: "Helvetica Neue", Verdana, Arial, sans-serif !important;
 	text-transform: uppercase;
-	font-size: 1em;
 	letter-spacing: .1em;
-	line-height: normal;
 	display: inline;
+	font-size: .75em;
+    line-height: 12px;
+    padding: 0 10px;
+    color: #666;
 }
