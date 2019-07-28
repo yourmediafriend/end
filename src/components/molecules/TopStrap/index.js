@@ -17,6 +17,8 @@ const TopStrap = props => {
 	);
 };
 
-TopStrap.props = {};
+TopStrap.props = {
+	strapcopy: PropTypes.string
+};
 
 export default TopStrap;

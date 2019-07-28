@@ -47,7 +47,7 @@ class Dropdown extends React.Component {
 		)(data);
 
 		const colTwoHeader = flow(
-			filter(e => e.is_column_header && e.include_in_menu_column2),
+			filter(e => e.is_column_header && e.include_in_menu_column2)
 		)(data);
 
 		const colThree = flow(
@@ -61,32 +61,42 @@ class Dropdown extends React.Component {
 		)(data);
 
 		const colThreeHeader = flow(
-			filter(e => e.is_column_header && e.include_in_menu_column3),
+			filter(e => e.is_column_header && e.include_in_menu_column3)
 		)(data);
 
-		const colMenu = [{menuHeader: colOneHeader, menuList: colOne } , {menuHeader: colTwoHeader, menuList: colTwo } , {menuHeader: colThreeHeader, menuList: colThree } ];      
+		const colMenu = [
+			{ menuHeader: colOneHeader, menuList: colOne },
+			{ menuHeader: colTwoHeader, menuList: colTwo },
+			{ menuHeader: colThreeHeader, menuList: colThree }
+		];
 
 		return (
 			<div className={`nav_dropdrown ${colClass}`} id={id}>
 				<div className={"nav_dropdrown_inner"}>
 					<div className={"nav_dropdrown_content"}>
 						{colMenu.map((e, i) => {
-							if (e.menuList.length) {
-								return (
-									<div key={i}>
-										{e.menuHeader[0] ? <h3 className="colHeader">{e.menuHeader[0].custom_category_name || e.menuHeader[0].name}</h3> : null}
+							return e.menuList.length
+								? <div key={i}>
+										{e.menuHeader[0]
+											? <h3 className="colHeader">
+													{e.menuHeader[0].custom_category_name ||
+														e.menuHeader[0].name}
+												</h3>
+											: null}
 										<ul>
 											{e.menuList.map((e, i) => {
 												return (
 													<li key={i}>
-														<Link url_path={`/${e.url_path}`} linkText= {e.custom_category_name || e.name} />
+														<Link
+															urlPath={`/${e.url_path}`}
+															linkText={e.custom_category_name || e.name}
+														/>
 													</li>
 												);
 											})}
 										</ul>
 									</div>
-								);
-							}
+								: null;
 						})}
 					</div>
 				</div>

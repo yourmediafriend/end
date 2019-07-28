@@ -13,7 +13,7 @@ const Page = props => {
 };
 
 Page.props = {
-
+	children: PropTypes.object
 };
 
 export default Page;

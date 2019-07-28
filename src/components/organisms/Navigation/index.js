@@ -19,7 +19,7 @@ class Navigation extends React.Component {
 												className="panel-heading"
 												id={`${e.url_path}Heading`}
 											>
-												<Link url_path={`/${e.url_path}`} linkText= {e.custom_category_name || e.name} />
+												<Link urlPath={`/${e.url_path}`} linkText= {e.custom_category_name || e.name} />
 											</div>
 											{e.children_data.length
 												? <Dropdown

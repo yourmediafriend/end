@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Link = props => {
-	const { url_path, linkText } = props;
+	const { urlPath, linkText } = props;
 
 	return (
-		<a href={`/${url_path}`}>
+		<a href={`/${urlPath}`}>
 			<span>
 				{linkText}
 			</span>
@@ -13,6 +13,9 @@ const Link = props => {
 	);
 };
 
-Link.props = {};
+Link.props = {
+	urlPath: PropTypes.string,
+	linkText: PropTypes.string,
+};
 
 export default Link;
