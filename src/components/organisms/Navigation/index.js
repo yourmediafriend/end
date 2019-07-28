@@ -12,9 +12,9 @@ class Navigation extends React.Component {
 				<ul className="nav">
 					{Nav.navCatagories.map((e, i) => {
 						return (
-							<React.Fragment>
+							<React.Fragment key={i}>
 								{e.include_in_menu === 1
-									? <li className={"nav_item"} key={i}>
+									? <li className={"nav_item"} >
 											<div
 												className="panel-heading"
 												id={`${e.url_path}Heading`}
