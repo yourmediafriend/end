@@ -1,7 +1,7 @@
 import React from "react";
 
-import Page from "./layout/Page";
-import Header from "./layout/Header";
+import Page from "./components/layout/Page";
+import Header from "./components/layout/Header";
 
 function App() {
 	return (

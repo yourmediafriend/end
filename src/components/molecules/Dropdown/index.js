@@ -1,7 +1,8 @@
 import React from "react";
-import Nav from "../../content/testData";
 import { flow, filter } from "lodash/fp";
 import "./Dropdown.css";
+
+import Link from "../../atoms/Link";
 
 class Dropdown extends React.Component {
 	render() {
@@ -63,7 +64,6 @@ class Dropdown extends React.Component {
 			filter(e => e.is_column_header && e.include_in_menu_column3),
 		)(data);
 
-
 		const colMenu = [{menuHeader: colOneHeader, menuList: colOne } , {menuHeader: colTwoHeader, menuList: colTwo } , {menuHeader: colThreeHeader, menuList: colThree } ];      
 
 		return (
@@ -79,11 +79,7 @@ class Dropdown extends React.Component {
 											{e.menuList.map((e, i) => {
 												return (
 													<li key={i}>
-														<a href={`/${e.url_path}`}>
-															<span>
-																{e.custom_category_name || e.name}
-															</span>
-														</a>
+														<Link url_path={`/${e.url_path}`} linkText= {e.custom_category_name || e.name} />
 													</li>
 												);
 											})}
