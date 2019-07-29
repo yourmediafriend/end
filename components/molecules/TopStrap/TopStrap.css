@@ -8,11 +8,10 @@
 }
 
 .topstrap_inner {
-	text-align: center;
-	width: 100%;
-	margin: 0;
-	padding: 4px 20px;
-	box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 4px 20px;
 }
 
 .topstrap_inner h2 {
@@ -21,7 +20,7 @@
 	letter-spacing: .1em;
 	display: inline;
 	font-size: .75em;
-	line-height: 12px;
-	padding: 0 10px;
-	color: #666;
+    line-height: 12px;
+    padding: 0 10px;
+    color: #666;
 }

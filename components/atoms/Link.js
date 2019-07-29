@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Link = props => {
-	const { urlPath, linkText, onClick } = props;
+	const { urlPath, linkText } = props;
 
 	return (
-		<a href={`/${urlPath}`} onClick={onClick} >
+		<a href={`/${urlPath}`}>
 			<span>
 				{linkText}
 			</span>
