@@ -36,3 +36,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run build`
 ### `node server/index.js`
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
