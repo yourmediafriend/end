@@ -14,10 +14,12 @@ class NavigationItem extends React.Component {
 	}
 
 	handleClick (e) {
-        e.preventDefault();
-        this.setState ({
-            active: !(this.state.active)
-        })
+		if (this.props.data.children_data.length > 0 ){
+			e.preventDefault();
+			this.setState ({
+				active: !(this.state.active)
+			})
+		}
     }
 
 	render() {
@@ -25,7 +27,7 @@ class NavigationItem extends React.Component {
 		return (
 			<React.Fragment>
 				{data.include_in_menu === 1 &&
-					<li className={`nav_item ${this.state.active && "nav_item--active"}`}>
+					<li className={`nav_item ${this.state.active ? "nav_item--active" : ""}   ${data.children_data.length > 0 ? "nav_item--has-children" : ""}   `}>
 						<div className="panel-heading" id={`${data.url_path}Heading`}>
 							<Link
 								urlPath={`/${data.url_path}`}

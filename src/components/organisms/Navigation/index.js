@@ -10,14 +10,7 @@ class Navigation extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state={};
-		this.handleClick = this.handleClick.bind(this);			
 	}
-
-	handleClick () {
-
-
-	}
-
 
 	render() {
 		return (
